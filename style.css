@@ -10,12 +10,26 @@ body, html {
 }
 
 body {
+    height: 100vh;
     display: grid;
     grid-template-rows: 1fr auto;
 }
 
 .display {
     background-color: #373d41;
+    display: flex;
+    width: 100vw;
+}
+
+.display .screen {
+    height: 100%;
+    width: 100%;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.display .screen img {
+    width: 100%;
 }
 
 .navigators {
@@ -35,4 +49,10 @@ body {
     height: 50px;
     border-radius: 10px;
     cursor: pointer;
+    overflow: hidden;
+}
+
+.navigators .tab img {
+    height: 100%;
+    object-fit: cover;
 }
